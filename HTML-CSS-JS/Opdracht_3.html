@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht_3</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        //<!-- TELT HOE VAAK EEN LETTER IN EEN TEKST STAAT -->
+        function telChar(){
+            var txt = document.getElementById("invoer1").value;
+            var char = document.getElementById("invoer2").value;
+            if (char == ""){
+                char = 'e';
+            }
+            var charTeller = 0;
+            for (i = 0; i < txt.length; i++){
+                if(txt.charAt(i) == char){
+                    charTeller += 1;
+                }
+            }
+            alert("Het karakter " + char + " zit " + charTeller + " keer in de tekst!");
+        }
+    </script>
+</head>
+
+<body>
+    <h1> 3. Hoe vaak zit een bepaald karakter in deze tekst? </h1>
+    <p>Tekst: <br></p>
+    <input type="text" id="invoer1"> <br><br>
+    <p>Welk karakter wil je zoeken in de tekst? <br>
+    <i>(Als je niks invult zoeken we naar een 'e'!)</i><br></p>
+    <input type="text" id="invoer2"> <br><br>
+    <input type="button" value="Check it!" onclick="telChar()">
+</body>
+</html>

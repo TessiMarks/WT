@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht_2</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        //<!-- ZOEKT EEN E IN EEN INGEVOERD TEKSTVELD -->
+        function checke(){
+            var txt = document.getElementById("invoer").value;
+            for (i = 0; i < txt.length; i++){
+                if(txt.charAt(i) == 'e'){
+                    alert("Ja, er zit een e in!");
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1> 2. Zit er een 'e' in deze tekst? </h1>
+    <p>Typ hier je tekst:</p>
+    <input type="text" id="invoer">
+    <input type="button" value="Check it!" onclick="checke()">
+</body>
+</html>

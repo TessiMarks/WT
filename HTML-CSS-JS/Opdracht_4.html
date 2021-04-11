@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht_4</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        //<!-- HOUDT KNOPHISTORIE BIJ IN EEN LIJST-->
+        function knopHistorie(knopnr){
+            var div = document.createElement("div");
+            div.style.width = "500px";
+            div.style.height = "20px";
+            div.innerHTML = "Je hebt op knop "+knopnr+" geklikt.";
+            document.getElementById("myList").appendChild(div);
+        }
+    </script>
+</head>
+
+<body>
+    <h1> 4. Knoppenhistorie </h1>
+    <p> Klik op een van deze knoppen: </p>
+    <input type ="button" id="A" value="Knop A" onclick="knopHistorie('A')">
+    <input type ="button" id="B" value="Knop B" onclick="knopHistorie('B')">
+    <input type ="button" id="C" value="Knop C" onclick="knopHistorie('C')">
+    <input type ="button" id="D" value="Knop D" onclick="knopHistorie('D')">
+    <p> Je hebt op deze knoppen gedrukt: </p>
+    <p id="myList"></p>
+</body>
+</html>

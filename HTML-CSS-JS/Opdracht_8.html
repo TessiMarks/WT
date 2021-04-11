@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht_8</title>
+    <style>
+        h1{
+            color: blue;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{
+            color: black;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+<script>
+    var images = ["Opdracht_6_Winter.jpg", "Opdracht_6_Lente.jpg",
+    "Opdracht_6_Zomer.jpg", "Opdracht_6_Herfst.jpg"];
+    var seizoenen = 0;
+
+    function afbeeldingen(){
+        if (seizoenen < 3){
+            seizoenen +=1;
+        } else {
+            seizoenen = 0;
+        }
+        document.getElementById("AFBA").src = images[seizoenen];
+
+        if (seizoenen == 1){
+            document.getElementById("AFBB").src = "Opdracht_8_Lam.jpg";
+        } else{
+            document.getElementById("AFBB").src = "Opdracht_8_Egel.jpg";
+        }
+    }
+</script>
+</head>
+
+<body>
+    <h1>8. De lente begint!</h1>
+    <p>Klik op de linkerafbeelding: <br><br>
+    <img id="AFBA" src="Opdracht_6_Winter.jpg" style="width:200px" onclick="afbeeldingen()">
+    <img id="AFBB" src="Opdracht_8_Egel.jpg" style="width:200px">
+    <br><br>
+    </p>
+</body>
+</html>

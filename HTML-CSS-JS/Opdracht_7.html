@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht_7</title>
+    <style>
+        h1{
+            color: blue;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{
+            color: black;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        var images = ["Opdracht_6_Winter.jpg", "Opdracht_6_Lente.jpg",
+        "Opdracht_6_Zomer.jpg", "Opdracht_6_Herfst.jpg"];
+        var seizoenenA = 0;
+        var seizoenenB = 0;
+
+        function afbeeldingen(imgnr){
+            if (imgnr == 1){
+                if (seizoenenA < 3){
+                    seizoenenA +=1;
+                } else {
+                    seizoenenA = 0;
+                }
+                document.getElementById("AFBA").src = images[seizoenenA]; 
+            }
+               
+            else{
+                if (seizoenenB < 3){
+                    seizoenenB +=1;
+                } else {
+                    seizoenenB = 0;
+                }
+                document.getElementById("AFBB").src = images[seizoenenB];
+            }
+        }
+
+        function hetzelfdeCheck(){
+            if (seizoenenA == seizoenenB){
+                console.log("HETZELFDE");
+            } else {
+                console.log("NIET HETZELFDE");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>7. Zijn de afbeeldingen hetzelfde?</h1>
+    <p>Afbeelding A: &nbsp&nbsp&nbsp Afbeelding B: <br><br>
+    <img id="AFBA" src="Opdracht_6_Winter.jpg" style="width:200px">   <img id="AFBB" src="Opdracht_6_Winter.jpg" style="width:200px">
+    <br><br>
+    <input type ="button" id="KNA" value="Verander A" onclick="afbeeldingen(1)">
+    <input type ="button" id="KNB" value="Verander B" onclick="afbeeldingen(2)"><br><br>
+    <input type ="button" id="KNC" value="Zijn ze hetzelfde?" onclick="hetzelfdeCheck()">
+    </p>
+</body>
+</html>

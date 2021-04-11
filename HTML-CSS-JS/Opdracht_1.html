@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht_1</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        //<!-- ZEGT WELKOM ALS HALLO & TOT DE VOLGENDE KEER ALS DOEI -->
+        function groet(){
+            var txt = document.getElementById("invoer").value;
+            if(txt == "hallo"){
+                alert("Welkom!")
+            }
+            if(txt == "doei"){
+                alert("Tot de volgende keer!")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1> 1. Hallo! </h1>
+    <p>Kom je 'hallo' zeggen of 'doei'?</p>
+    <input type="text" id="invoer">
+    <input type="button" value="Klik hier!" onclick="groet()">
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht_6</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        //<!-- KLIKT DOOR DE VIER SEIZOENEN HEEN -->
+        var images = ["Opdracht_6_Winter.jpg", "Opdracht_6_Lente.jpg",
+        "Opdracht_6_Zomer.jpg", "Opdracht_6_Herfst.jpg"];
+        var seizoen = 1;
+        var jaren = 0;
+
+        function afbeeldingen(){
+            if (seizoen < 4){
+                seizoen += 1;
+            } else {
+                seizoen = 1;
+                jaren +=1;
+                var txt = document.getElementById("txt");
+                txt.textContent = "Er zijn " +jaren+ " jaren voorbij.";
+            }
+        document.getElementById("myImage").src = images[seizoen-1];
+        }
+    </script>
+</head>
+
+<body>
+    <h1>6. Vier seizoenen, vier afbeeldingen</h1>
+    <p>Klik op de knop om door de vier seizoenen heen te lopen:</p>
+    <input type ="image" id="myImage" src="Opdracht_6_Winter.jpg" style=width:200px><br>
+    <input type="button" onclick="afbeeldingen()" value="Naar het volgende seizoen!"><br>
+    <p id="txt">Er zijn 0 jaren voorbij.</p>
+</body>
+</html>

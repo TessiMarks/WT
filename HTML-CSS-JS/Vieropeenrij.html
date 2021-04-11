@@ -1,0 +1,99 @@
+<!-- Bestand van Tessi -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vier op een rij</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        p{
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        div{
+            background-color: lightskyblue;
+            border: 2px solid white;
+            display:inline-block;
+            width: 50px;
+            height: 50px;
+        }
+        div:hover{
+            background-color: lightgreen;
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+        //<!-- VIER OP EEN RIJ SCRIPT -->
+
+        // Alle vakjes moeten een naam krijgen: vak1, vak2, vak3, etc.
+        // Rijen en kolommen maken, door een soort van matrix / coordinaten array
+        // Bijv. vakje linksboven is [0, 0] [rij, kolom], die rechts ernaast [1, 0] etc.
+
+        // 0,0 | 1,0 | 2,0 | 3,0 | 4,0 | 5,0 | 6,0 | 7,0
+        // 0,1 | 1,1 | 2,1 | 3,1 | 4,1 | 5,1 | 6,1 | 7,1
+        // 0,2 | 1,2 | 2,2 | 3,2 | 4,2 |
+        // 0,3 | 1,3 | 2,3 | 3,3 |
+        // 0,4 | 1,4 | 2,4 |
+        // 0,5 | 1,5 | 2,5 |
+        // 0,6 | 1,6 | 2,6 |
+
+        // De kolom waarin er wordt gegooid moet gekleurd worden
+        // Eerst mag alleen op de onderste rij worden geklikt
+
+        // Als er wordt geklikt op een vakje, maar er is een rij er onder nog vrij, dan
+        // moet het vakje gekleurd worden in dezelfde kolom met de 'laagst' beschikbare rij
+        // if (rij vakje - 1 is beschikbaar: ga daarheen)
+        // Als een kolom vol is, moet de speler een ander vakje kiezen
+
+        // Wanneer heeft er iemand gewonnen?
+        // Horizontale check: zijn er uberhaupt 4 stenen naast elkaar?
+        // Horizontale check II: zijn er 4 stenen die dezelfde kleur hebben naast elkaar?
+        // Verticale check: zijn er 4 stenen die dezelfde kleur hebben boven elkaar?
+
+
+        // VAN SPELERS WISSELEN
+        var spelerindex = 0;
+        function veranderkleur(getal){
+            var kolom = getal % 3;
+            var elem1 = document.getElementById("div"+(kolom + 6));
+
+            var hetelement = document.getElementById("div"+getal);
+            console.log(hetelement);
+            hetelement.style.backgroundColor = veranderSpeler();
+        }
+        function veranderSpeler(){
+            if(spelerindex == 0){
+                spelerindex = 1;
+                return 'yellow';
+            }else{
+                spelerindex = 0;
+                return 'red';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- VIER OP EEN RIJ BODY -->
+    <h1>Speel hier Vier op een rij</h1>
+    <div onclick="veranderkleur(1)" id=div1></div>
+    <div onclick="veranderkleur(2)" id=div2></div>
+    <div onclick="veranderkleur(3)" id=div3></div>
+    <div onclick="veranderkleur(4)" id=div4></div><br>
+    <div onclick="veranderkleur(5)" id=div5></div>
+    <div onclick="veranderkleur(6)" id=div6></div>
+    <div onclick="veranderkleur(7)" id=div7></div>
+    <div onclick="veranderkleur(8)" id=div8></div><br>
+    <div onclick="veranderkleur(9)" id=div9></div>
+    <div onclick="veranderkleur(10)" id=div10></div>
+    <div onclick="veranderkleur(11)" id=div11></div>
+    <div onclick="veranderkleur(12)" id=div12></div><br>    
+</body>
+</html>
