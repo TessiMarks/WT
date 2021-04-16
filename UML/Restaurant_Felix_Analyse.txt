@@ -1,0 +1,69 @@
+APPLICATIE RESTAURANT FELIX
+
+Wat is het nu
+- gerechten van het restaurant
+- waar het restaurant zit
+
+Applicatie
+- website (ook mobiel)
+- klanten en personeelsleden
+- eten ophalen
+- reserveringen
+- maximum van 30 mensen in het gebouw (excl personeel)
+SLOTS 
+-- slot 16-18 (met korting)
+-- slot 18-20
+-- slot 20-22
+- dagen waarop het restaurant dicht is
+
+Online bestellen
+- menu-items
+- geen minimumbedrag
+- moment kiezen om eten op te halen
+
+Info klanten
+- drie weken bewaren
+PERSOON DIE RESERVEERT
+-- voornaam
+-- e-mailadres (voor bevestiging of annulering)
+-- telefoonnummer (om te bellen vanwege corona of annulering)
+-- hoeveel mensen komen er mee
+OOK VOOR OVERIGE GASTEN BIJ DE PERSOON DIE RESERVEERT
+-- vragen over klachten: nee kunnen aankruisen 24 uur voor reservering
+
+Accounts
+- alle personeelsleden kunnen zien welke orders er zijn
+- personeelsleden aparte accounts
+- afvinken wanneer iets is opgehaald/wanneer gasten zijn komen opdagen
+- personeelsaccounts kunnen een reservering voor iemand invullen
+- een paar personeelsleden verantwoordelijk voor creeeren accounts
+- klanten geen account maar wel een bevestigingsmail
+
+======================================
+
+IN HET DIAGRAM:
+
+BEHEERDER
+
+KLANT
+- gaat naar website
+- button voor 'reserveren' of 'afhalen'
+- bij afhalen: menu en items selecteren (+ aantal), tijdslot kiezen (tijdintervallen?), gegevens invullen, betaalopties/betalen
+- bij reserveren: tijdslot kiezen, in beeld: plaatsen voor aantal personen beschikbaar, gegevens invullen
+- via mail: bevestigingsnummer/naam, annuleeroptie, covidformulier invullen (wat als niet invullen? formulier/vragen bij aankomst?)
+
+Info klanten
+PERSOON DIE RESERVEERT
+-- voornaam + achternaam
+-- e-mailadres (voor bevestiging of annulering)
+-- telefoonnummer (om te bellen vanwege corona of annulering)
+-- als 'reserveren in het restaurant': hoeveel mensen komen er mee
+-- tekst voor evt. opmerkingen
+OOK VOOR OVERIGE GASTEN BIJ DE PERSOON DIE RESERVEERT
+-- vragen over klachten: nee kunnen aankruisen 24 uur voor reservering
+
+PERSONEEL
+- inloggen op website (via computer/tablet/mobiel)
+- types personeel: keuken, staf
+-- keuken: zien welke bestellingen wanneer klaar moeten zijn, button voor als een bestelling gereed is
+-- staf: reserveringen inzien/maken/wijzigen/annuleren, button voor covidformulier, button voor als klant is geweest
